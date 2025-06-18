@@ -39,6 +39,11 @@ const index = (app, db) => {
 
     // Logout page
     app.get("/logout", sessionHandler.displayLogoutPage);
+     // Research Page
+    app.get("/research", isLoggedIn, researchHandler.displayResearch);
+
+    // Mount tutorial router
+    app.use("/tutorial", tutorialRouter);
 
     // The main page of the app
     app.get("/dashboard", isLoggedIn, sessionHandler.displayWelcomePage);
