@@ -28,6 +28,7 @@ const index = (app, db) => {
 
     // The main page of the app
     app.get("/", sessionHandler.displayWelcomePage);
+     app.get("/", sessionHandler.displayWelcomePage);
 
     // Login form
     app.get("/login", sessionHandler.displayLoginPage);
