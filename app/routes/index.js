@@ -23,8 +23,7 @@ const index = (app, db) => {
     // Middleware to check if a user is logged in
     const isLoggedIn = sessionHandler.isLoggedInMiddleware;
 
-    //Middleware to check if user has admin rights
-    const isAdmin = sessionHandler.isAdminUserMiddleware;
+   
 
     // The main page of the app
     app.get("/", sessionHandler.displayWelcomePage);
@@ -40,8 +39,7 @@ const index = (app, db) => {
     // Logout page
     app.get("/logout", sessionHandler.displayLogoutPage);
 
-    // The main page of the app
-    app.get("/dashboard", isLoggedIn, sessionHandler.displayWelcomePage);
+ 
 
     // Profile page
     app.get("/profile", isLoggedIn, profileHandler.displayProfile);
