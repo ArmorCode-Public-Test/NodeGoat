@@ -72,11 +72,7 @@ const index = (app, db) => {
         return res.redirect(req.query.url);
     });
 
-    // Research Page
-    app.get("/research", isLoggedIn, researchHandler.displayResearch);
-
-    // Mount tutorial router
-    app.use("/tutorial", tutorialRouter);
+   
 
     // Error handling middleware
     app.use(ErrorHandler);
