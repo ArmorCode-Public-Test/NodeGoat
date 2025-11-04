@@ -1,4 +1,4 @@
-name: Build and Tag Docker Image
+name: nodegoat-github
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
           JF_URL: https://acintegration.jfrog.io
           JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
 
-      - name: Build Tag and push Docker Image
+      - name: nodegoat-github
         env:
           IMAGE_NAME: acintegration.jfrog.io/nodegoat-docker-local/theredhatter/dvwa_test:${{ github.run_number }}
         run: |
