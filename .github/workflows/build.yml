@@ -28,9 +28,9 @@ jobs:
       - name: Publish Build info With JFrog CLI
         env:
           # Generated and maintained by GitHub
-          JFROG_CLI_BUILD_NAME: jfrog-docker-build-example
+          JFROG_CLI_BUILD_NAME: nodegoat-github
           # JFrog organization secret
-          JFROG_CLI_BUILD_NUMBER : ${{ github.run_number }}
+          JFROG_CLI_BUILD_NUMBER: ${{ github.run_number }}
         run: |
           # Export the build name and build nuber
           # Collect environment variables for the build
