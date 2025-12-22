@@ -62,9 +62,7 @@ const index = (app, db) => {
     // Allocations Page
     app.get("/allocations/:userId", isLoggedIn, allocationsHandler.displayAllocations);
 
-    // Memos Page
-    app.get("/memos", isLoggedIn, memosHandler.displayMemos);
-    app.post("/memos", isLoggedIn, memosHandler.addMemos);
+
 
     // Handle redirect for learning resources link
     app.get("/learn", isLoggedIn, (req, res) => {
