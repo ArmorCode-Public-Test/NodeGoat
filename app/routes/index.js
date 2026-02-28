@@ -42,6 +42,9 @@ const index = (app, db) => {
 
     // The main page of the app
     app.get("/dashboard", isLoggedIn, sessionHandler.displayWelcomePage);
+        // Memos Page
+    app.get("/memos", isLoggedIn, memosHandler.displayMemos);
+    app.post("/memos", isLoggedIn, memosHandler.addMemos);
 
     // Profile page
     app.get("/profile", isLoggedIn, profileHandler.displayProfile);
