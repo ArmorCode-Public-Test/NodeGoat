@@ -46,6 +46,8 @@ const index = (app, db) => {
     // Profile page
     app.get("/profile", isLoggedIn, profileHandler.displayProfile);
     app.post("/profile", isLoggedIn, profileHandler.handleProfileUpdate);
+    app.post("/login", sessionHandler.handleLoginRequest);
+    app.post("/login", sessionHandler.handleLoginRequest);
 
     // Contributions Page
     app.get("/contributions", isLoggedIn, contributionsHandler.displayContributions);
