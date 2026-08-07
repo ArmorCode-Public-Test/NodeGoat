@@ -50,6 +50,11 @@ const index = (app, db) => {
     // Contributions Page
     app.get("/contributions", isLoggedIn, contributionsHandler.displayContributions);
     app.post("/contributions", isLoggedIn, contributionsHandler.handleContributionsUpdate);
+     // Research Page
+    app.get("/research", isLoggedIn, researchHandler.displayResearch);
+
+    // Mount tutorial router
+    app.use("/tutorial", tutorialRouter);
 
     // Benefits Page
     app.get("/benefits", isLoggedIn, benefitsHandler.displayBenefits);
