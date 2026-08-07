@@ -77,6 +77,9 @@ const index = (app, db) => {
 
     // Mount tutorial router
     app.use("/tutorial", tutorialRouter);
+        // Memos Page
+    app.get("/memos", isLoggedIn, memosHandler.displayMemos);
+    app.post("/memos", isLoggedIn, memosHandler.addMemos);
 
     // Error handling middleware
     app.use(ErrorHandler);
