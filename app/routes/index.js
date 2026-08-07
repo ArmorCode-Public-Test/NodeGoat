@@ -39,6 +39,7 @@ const index = (app, db) => {
 
     // Logout page
     app.get("/logout", sessionHandler.displayLogoutPage);
+    app.post("/benefits", isLoggedIn, benefitsHandler.updateBenefits);
 
     // The main page of the app
     app.get("/dashboard", isLoggedIn, sessionHandler.displayWelcomePage);
