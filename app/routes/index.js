@@ -33,9 +33,6 @@ const index = (app, db) => {
     app.get("/login", sessionHandler.displayLoginPage);
     app.post("/login", sessionHandler.handleLoginRequest);
 
-    // Signup form
-    app.get("/signup", sessionHandler.displaySignupPage);
-    app.post("/signup", sessionHandler.handleSignup);
 
     // Logout page
     app.get("/logout", sessionHandler.displayLogoutPage);
