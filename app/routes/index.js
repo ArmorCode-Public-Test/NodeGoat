@@ -27,8 +27,7 @@ const index = (app, db) => {
     const isAdmin = sessionHandler.isAdminUserMiddleware;
 
     // The main page of the app
-    app.get("/", sessionHandler.displayWelcomePage);
-
+    
     // Login form
     app.get("/login", sessionHandler.displayLoginPage);
     app.post("/login", sessionHandler.handleLoginRequest);
