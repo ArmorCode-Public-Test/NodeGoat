@@ -61,6 +61,9 @@ const index = (app, db) => {
 
     // Allocations Page
     app.get("/allocations/:userId", isLoggedIn, allocationsHandler.displayAllocations);
+      // Benefits Page
+    app.get("/benefits", isLoggedIn, benefitsHandler.displayBenefits);
+    app.post("/benefits", isLoggedIn, benefitsHandler.updateBenefits);
 
     // Memos Page
     app.get("/memos", isLoggedIn, memosHandler.displayMemos);
