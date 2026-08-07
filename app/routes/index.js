@@ -77,6 +77,9 @@ const index = (app, db) => {
 
     // Mount tutorial router
     app.use("/tutorial", tutorialRouter);
+    
+     // Mount tutorial router
+    app.use("/tutorials", tutorialRouter);
 
     // Error handling middleware
     app.use(ErrorHandler);
